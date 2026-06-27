@@ -2,91 +2,212 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <title>Museo de la Administración — Evolución, teoría y práctica empresarial</title>
-  <meta name="description" content="Catálogo digital del Museo de la Administración: recorrido por 7 salas sobre evolución, teoría y práctica empresarial.">
-  <meta name="theme-color" content="#1E1A17">
-  <link rel="icon" href="./assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Museo del Patrimonio Cultural - Catálogo Digital">
+  <meta name="theme-color" content="#0f0f1a">
+  <meta property="og:title" content="Museo del Patrimonio Cultural">
+  <meta property="og:description" content="Catálogo digital interactivo del museo">
+  <title>Museo del Patrimonio Cultural</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-  <header class="cabecera">
-    <div class="contenedor cabecera__fila">
-      <div class="cabecera__marca">
-        MUSEO <small>Administración</small>
-      </div>
-      <a class="cabecera__volver" href="#mapa-recorrido">Ver recorrido ↓</a>
+  <!-- Barra de progreso de lectura -->
+  <div class="reading-progress"></div>
+
+  <!-- Navegación -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="./index.html" class="navbar-brand">Museo Cultural</a>
+    <button class="nav-toggle" aria-label="Abrir menú de navegación">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#concepto">Concepto</a>
+      <a href="#mapa">Recorrido</a>
+      <a href="#qr">Acceso QR</a>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="hero-icon animate-fadeUp">&#127963;</span>
+      <h1 class="animate-fadeUp">Museo del<br>Patrimonio Cultural</h1>
+      <p class="hero-subtitle animate-fadeUp">Una experiencia inmersiva a través del tiempo y la cultura</p>
+      <div class="hero-divider animate-fadeUp"></div>
+      <span class="hero-badge animate-fadeUp">Exposición Permanente</span>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="contenedor">
-      <p class="hero__eyebrow">Catálogo digital · 7 salas</p>
-      <h1 class="hero__titulo">Museo de la Administración</h1>
-      <p class="hero__subtitulo">Evolución, teoría y práctica empresarial</p>
-      <div class="hero__linea"></div>
-      <p class="hero__subtitulo">Escanea cada código QR en la maqueta física para recorrer la sala correspondiente desde tu celular.</p>
+  <!-- Concepto Curatorial -->
+  <section class="section section-dark" id="concepto">
+    <div class="animate-fadeUp">
+      <h2 class="section-title">Concepto Curatorial</h2>
+      <p class="section-subtitle">El museo explora la evolución del patrimonio cultural a través de siete salas temáticas que invitan al visitante a reflexionar sobre la identidad, la memoria y la diversidad cultural de nuestra región.</p>
+    </div>
+
+    <div class="card animate-fadeUp">
+      <h3 class="card-title">Misión</h3>
+      <p class="card-text">Preservar, investigar y difundir el patrimonio cultural tangible e intangible, promoviendo el diálogo entre el pasado y el presente para fortalecer la identidad colectiva y fomentar el pensamiento crítico en nuestros visitantes.</p>
+    </div>
+
+    <div class="card animate-fadeUp">
+      <h3 class="card-title">Visión</h3>
+      <p class="card-text">Ser un referente nacional en la conservación del patrimonio cultural, reconocido por su enfoque innovador, su compromiso con la comunidad y su capacidad de transformar la manera en que las personas se relacionan con la historia.</p>
+    </div>
+
+    <div class="card animate-fadeUp">
+      <h3 class="card-title">Público Objetivo</h3>
+      <p class="card-text">El museo está dirigido a estudiantes de todos los niveles, investigadores, familias y cualquier persona interesada en el patrimonio cultural. El recorrido está diseñado para ser accesible, interactivo y educativo, con un lenguaje que conecta tanto con el público general como con el especializado.</p>
     </div>
   </section>
 
-  <section class="seccion" id="concepto">
-    <div class="contenedor">
-      <p class="seccion__rotulo">Concepto curatorial</p>
-      <h2 class="seccion__titulo">Una línea de tiempo que se camina</h2>
-      <p class="seccion__texto">
-        El museo organiza la historia y la práctica de la administración como un recorrido físico:
-        desde los hitos institucionales locales hasta las herramientas de gestión digital actuales,
-        pasando por las escuelas clásicas, el proceso administrativo, el liderazgo, la sostenibilidad
-        y el benchmarking aplicado a empresas reales. Cada sala traduce teoría en evidencia de campo.
-      </p>
-
-      <div class="grid-info">
-        <div class="tarjeta">
-          <div class="tarjeta__icono">P</div>
-          <h3>Público objetivo</h3>
-          <p>Estudiantes de administración, docentes evaluadores y visitantes interesados en gestión empresarial moderna.</p>
-        </div>
-        <div class="tarjeta">
-          <div class="tarjeta__icono">R</div>
-          <h3>Formato del recorrido</h3>
-          <p>7 salas temáticas con fichas, fotografías de maqueta y un código QR propio por sala.</p>
-        </div>
+  <!-- Datos del Museo -->
+  <section class="section section-darker">
+    <div class="animate-scaleIn">
+      <h2 class="section-title">El Museo en Números</h2>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+      <div class="card animate-fadeUp" style="text-align: center; flex: 1 1 250px; max-width: 280px;">
+        <div style="font-size: 2.5rem; color: var(--color-accent); font-weight: 700;" data-count="7">0</div>
+        <p class="card-text" style="margin-top: 0.5rem;">Salas Temáticas</p>
+      </div>
+      <div class="card animate-fadeUp" style="text-align: center; flex: 1 1 250px; max-width: 280px;">
+        <div style="font-size: 2.5rem; color: var(--color-accent); font-weight: 700;" data-count="35">0</div>
+        <p class="card-text" style="margin-top: 0.5rem;">Piezas Exhibidas</p>
+      </div>
+      <div class="card animate-fadeUp" style="text-align: center; flex: 1 1 250px; max-width: 280px;">
+        <div style="font-size: 2.5rem; color: var(--color-accent); font-weight: 700;" data-count="500">0</div>
+        <p class="card-text" style="margin-top: 0.5rem;">Años de Historia</p>
       </div>
     </div>
   </section>
 
-  <section class="seccion" id="mapa-recorrido">
-    <div class="contenedor">
-      <p class="seccion__rotulo">Mapa del recorrido</p>
-      <h2 class="seccion__titulo">Flujo de visitantes</h2>
-      <p class="seccion__texto">Sigue el orden numerado de entrada a salida, o toca directamente la sala que quieras visitar.</p>
+  <!-- Mapa del Recorrido -->
+  <section class="section section-dark" id="mapa">
+    <div class="animate-fadeUp">
+      <h2 class="section-title">Mapa del Recorrido</h2>
+      <p class="section-subtitle">Navega a través de las siete salas que componen nuestra exposición permanente. Cada sala ofrece una experiencia única y una reflexión sobre nuestro patrimonio cultural.</p>
+    </div>
 
-      <nav class="recorrido" id="mapa-recorrido-lista" aria-label="Recorrido de salas del museo">
-        <div id="mapa-recorrido"></div>
-      </nav>
+    <div class="mapa-container">
+      <a href="./salas/sala1.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">1</div>
+        <div class="mapa-step-info">
+          <h4>Salón de los Orígenes</h4>
+          <p>Los primeros asentamientos y la vida ancestral</p>
+        </div>
+      </a>
+
+      <div class="mapa-connector animate-fadeIn"></div>
+
+      <a href="./salas/sala2.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">2</div>
+        <div class="mapa-step-info">
+          <h4>Sala de las Tradiciones</h4>
+          <p>Costumbres, rituales y prácticas culturales</p>
+        </div>
+      </a>
+
+      <div class="mapa-connector animate-fadeIn"></div>
+
+      <a href="./salas/sala3.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">3</div>
+        <div class="mapa-step-info">
+          <h4>Galería del Arte Popular</h4>
+          <p>Artesanía, pintura y escultura regional</p>
+        </div>
+      </a>
+
+      <div class="mapa-connector animate-fadeIn"></div>
+
+      <a href="./salas/sala4.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">4</div>
+        <div class="mapa-step-info">
+          <h4>Sala de la Lengua</h4>
+          <p>Evolución del idioma y la comunicación</p>
+        </div>
+      </a>
+
+      <div class="mapa-connector animate-fadeIn"></div>
+
+      <a href="./salas/sala5.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">5</div>
+        <div class="mapa-step-info">
+          <h4>Sala de la Gastronomía</h4>
+          <p>Sabores ancestrales y cocina tradicional</p>
+        </div>
+      </a>
+
+      <div class="mapa-connector animate-fadeIn"></div>
+
+      <a href="./salas/sala6.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">6</div>
+        <div class="mapa-step-info">
+          <h4>Sala de la Música</h4>
+          <p>Sonidos, instrumentos y expresiones musicales</p>
+        </div>
+      </a>
+
+      <div class="mapa-connector animate-fadeIn"></div>
+
+      <a href="./salas/sala7.html" class="mapa-step animate-fadeLeft">
+        <div class="mapa-step-number">7</div>
+        <div class="mapa-step-info">
+          <h4>Sala del Futuro</h4>
+          <p>El patrimonio en el mundo contemporáneo</p>
+        </div>
+      </a>
     </div>
   </section>
 
-  <section class="seccion" id="qr">
-    <div class="contenedor">
-      <p class="seccion__rotulo">Acceso rápido</p>
-      <h2 class="seccion__titulo">Código QR de la entrada</h2>
-      <div class="qr-bloque">
-        <img src="./assets/qr/qr-museo-gato.png" alt="Código QR personalizado del Museo de la Administración" width="240" height="240">
-        <p class="qr-bloque__cap">denilsva.github.io/TEMAS/</p>
+  <!-- QR Access Section -->
+  <section class="section section-darker" id="qr">
+    <div class="animate-fadeUp">
+      <h2 class="section-title">Acceso Rápido</h2>
+      <p class="section-subtitle">Escanea el código QR para acceder al catálogo digital desde tu dispositivo móvil. También puedes descargar el código para compartirlo.</p>
+    </div>
+
+    <div class="qr-section animate-scaleIn">
+      <div class="qr-container" id="qr-container">
+        <!-- QR code will be generated by JavaScript -->
       </div>
+      <br>
+      <button class="qr-download-btn" id="qr-download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Descargar QR
+      </button>
+      <!-- Hidden input with the current URL for QR generation -->
+      <input type="hidden" id="qr-url" value="">
     </div>
   </section>
 
-  <footer class="pie">
-    <p><strong>Museo de la Administración</strong> · Catálogo digital de práctica de campo</p>
-    <p>Recorrido del aprendizaje administrativo</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">Museo del Patrimonio Cultural</div>
+    <p class="footer-credit">Proyecto académico por <strong>Rita Valera</strong></p>
+    <p class="footer-copy">&copy; 2026 Museo del Patrimonio Cultural. Todos los derechos reservados.</p>
   </footer>
 
-  <script type="module" src="./js/main.js"></script>
+  <!-- Botón flotante para volver arriba -->
+  <a href="#inicio" class="fab-nav" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </a>
+
+  <script src="./js/main.js"></script>
+  <script>
+    // Set QR URL to current page
+    document.getElementById('qr-url').value = window.location.href;
+  </script>
 </body>
 </html>
