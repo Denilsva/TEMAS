@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Museo de la Administración — Evolución, teoría y práctica empresarial</title>
+  <meta name="description" content="Catálogo digital del Museo de la Administración: recorrido por 7 salas sobre evolución, teoría y práctica empresarial.">
+  <meta name="theme-color" content="#1E1A17">
+  <link rel="icon" href="./assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__fila">
+      <div class="cabecera__marca">
+        MUSEO <small>Administración</small>
+      </div>
+      <a class="cabecera__volver" href="#mapa-recorrido">Ver recorrido ↓</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="contenedor">
+      <p class="hero__eyebrow">Catálogo digital · 7 salas</p>
+      <h1 class="hero__titulo">Museo de la Administración</h1>
+      <p class="hero__subtitulo">Evolución, teoría y práctica empresarial</p>
+      <div class="hero__linea"></div>
+      <p class="hero__subtitulo">Escanea cada código QR en la maqueta física para recorrer la sala correspondiente desde tu celular.</p>
+    </div>
+  </section>
+
+  <section class="seccion" id="concepto">
+    <div class="contenedor">
+      <p class="seccion__rotulo">Concepto curatorial</p>
+      <h2 class="seccion__titulo">Una línea de tiempo que se camina</h2>
+      <p class="seccion__texto">
+        El museo organiza la historia y la práctica de la administración como un recorrido físico:
+        desde los hitos institucionales locales hasta las herramientas de gestión digital actuales,
+        pasando por las escuelas clásicas, el proceso administrativo, el liderazgo, la sostenibilidad
+        y el benchmarking aplicado a empresas reales. Cada sala traduce teoría en evidencia de campo.
+      </p>
+
+      <div class="grid-info">
+        <div class="tarjeta">
+          <div class="tarjeta__icono">P</div>
+          <h3>Público objetivo</h3>
+          <p>Estudiantes de administración, docentes evaluadores y visitantes interesados en gestión empresarial moderna.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta__icono">R</div>
+          <h3>Formato del recorrido</h3>
+          <p>7 salas temáticas con fichas, fotografías de maqueta y un código QR propio por sala.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="mapa-recorrido">
+    <div class="contenedor">
+      <p class="seccion__rotulo">Mapa del recorrido</p>
+      <h2 class="seccion__titulo">Flujo de visitantes</h2>
+      <p class="seccion__texto">Sigue el orden numerado de entrada a salida, o toca directamente la sala que quieras visitar.</p>
+
+      <nav class="recorrido" id="mapa-recorrido-lista" aria-label="Recorrido de salas del museo">
+        <div id="mapa-recorrido"></div>
+      </nav>
+    </div>
+  </section>
+
+  <section class="seccion" id="qr">
+    <div class="contenedor">
+      <p class="seccion__rotulo">Acceso rápido</p>
+      <h2 class="seccion__titulo">Código QR de la entrada</h2>
+      <div class="qr-bloque">
+        <img src="./assets/qr/qr-museo-gato.png" alt="Código QR personalizado del Museo de la Administración" width="240" height="240">
+        <p class="qr-bloque__cap">denilsva.github.io/TEMAS/</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <p><strong>Museo de la Administración</strong> · Catálogo digital de práctica de campo</p>
+    <p>Recorrido del aprendizaje administrativo</p>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
